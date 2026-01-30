@@ -1,24 +1,35 @@
 # 🚀 Automated WordPress Infrastructure (LAMP Stack)
 
-## 🎯 Overview
-This project demonstrates the power of **Infrastructure as Code (IaC)** by automating the deployment of a complete WordPress environment on a Linux VM using **Ansible Roles**. Instead of manual configuration, a single command sets up the entire web stack.
+![WordPress Project Banner](https://raw.githubusercontent.com/ansible/logos/master/logos-png/ansible-logo-600px.png)
 
-## 🏗️ Architecture (LAMP Stack)
-- **L**inux: Target Virtual Machine (CentOS/Ubuntu).
-- **A**pache: High-performance HTTP Server.
-- **M**ariaDB: Reliable relational database for content storage.
-- **P**HP: Server-side scripting for dynamic content.
+## 🎯 Project Overview
+This project demonstrates **Infrastructure as Code (IaC)** by automating the deployment of a complete WordPress environment on a Linux VM using **Ansible Roles**. 
 
-## 📁 Project Structure
-- `inventory.ini`: Contains VM connection details.
-- `playbook.yml`: The main entry point that calls the WordPress role.
-- `roles/wordpress/`: Contains all logic:
-    - `tasks/`: Installation steps for Apache, MySQL, PHP, and WordPress.
-    - `templates/`: Dynamic `wp-config.php` file using Jinja2.
-    - `handlers/`: Automates service restarts.
+## 🏗️ The Architecture (LAMP)
+- **L**inux: Target Virtual Machine.
+- **A**pache: Web Server.
+- **M**ariaDB: Database for content storage.
+- **P**HP: Scripting language for WordPress logic.
 
-## 🚀 Usage
-1. Update `inventory.ini` with your VM's IP address and SSH credentials.
-2. Run the playbook:
-   ```bash
-   ansible-playbook -i inventory.ini playbook.yml
+## 📁 Directory Structure
+```text
+.
+├── inventory.ini        # Target VM details
+├── playbook.yml         # Main entry point
+└── roles/
+    └── wordpress/       # Modular WordPress role
+        ├── tasks/       # Installation & Configuration steps
+        ├── handlers/    # Service restart logic
+        ├── templates/   # Jinja2 wp-config template
+        └── vars/        # Sensitive & common variables
+```
+
+🚀 How to Use
+Configure: Update inventory.ini with your VM details.
+
+Execute: Run the following command:
+```
+Bash
+ansible-playbook -i inventory.ini playbook.yml
+Verify: Access http://<your-vm-ip> in your browser.
+```
