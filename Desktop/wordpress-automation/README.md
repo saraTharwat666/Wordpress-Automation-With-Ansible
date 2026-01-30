@@ -1,6 +1,6 @@
 # 🚀 Automated WordPress Infrastructure (LAMP Stack)
 
-![DigitalOcean Ansible Tutorial Banner](https://raw.githubusercontent.com/ansible/logos/master/logos-png/ansible-logo-600px.png)
+![DigitalOcean Ansible Tutorial Banner](https://assets.digitalocean.com/articles/automated_ansible/wordpress_panel.png)
 
 ## 🎯 Project Overview
 
